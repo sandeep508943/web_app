@@ -4,20 +4,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<style>
-		$(function(){
-                $("#includedContent").load("home.html");
-            });
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
 
 tr:nth-child(even){background-color: #f2f2f2}
 			body {margin:0;font-family:Arial}
@@ -34,7 +20,7 @@ tr:nth-child(even){background-color: #f2f2f2}
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .active {
@@ -52,7 +38,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 }
 
 .dropdown .dropbtn {
-  font-size: 17px;    
+  font-size: 15px;    
   border: none;
   outline: none;
   color: white;
@@ -74,7 +60,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 6px 8px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -128,55 +114,56 @@ tr:nth-child(even){background-color: #f2f2f2}
 	</head>
 	<script src="https://www.w3schools.com/lib/w3.js"></script>
 	<body>
-	
-	<p w3-include-html="content.html"></p> 
-
-<script>
-w3.includeHTML();
-</script>
-		<img src="logo.png" height="120px" width="200px"/>
-		<table>
+		<table border="0" width="100%">
+			<tr>
+				<td width="20%"><img src="logo.png" height="100px" width="180px"/></td>
+				<td width="80%"></td>
+				<td width="20%"></td>
+			</tr>
+			<td colspan="3">
+				<div class="topnav" id="myTopnav">
+					<a href="index.html" class="active">Home</a>
+					<div class="dropdown">
+						<button class="dropbtn">CORE Java 
+						  <i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+						  <a href="ExceptionHandling.html">Exception Handling</a>
+						  <a href="#">Multithreading</a>
+						  <a href="#">Collection</a>
+						  <a href="#">Interview Question-Answer</a>
+						</div>
+					</div>
+					<a href="#contact">JDBC</a>
+					<a href="#contact">Servlet</a>
+					<a href="#contact">JSP</a>
+					<a href="#contact">JSF</a>
+					<a href="#contact">Hibernate</a>
+					<div class="dropdown">
+						<button class="dropbtn">Spring 
+						  <i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+						  <a href="addEmployee.html">IOC</a>
+						  <a href="#">MVC</a>
+						  <a href="#">Transaction</a>
+						  <a href="#">Security</a>
+						</div>
+					</div> 
+					<a href="#about">SQL</a>
+					<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+				</div>
+			</td>
 			<tr>
 				<td></td>
-				<td><td/>
+				<td>
+					
+				</td>
 				<td></td>
 			</tr>
 		</table>
 		
-	<div class="topnav" id="myTopnav">
-		<a href="#home" class="active">Home</a>
-		<a href="#news">Core JAVA</a>
-		<a href="#contact">JDBC</a>
-		<a href="#contact">Servlet</a>
-		<a href="#contact">JSP</a>
-		<a href="#contact">JSF</a>
-		<a href="#contact">Hibernate</a>
-		<div class="dropdown">
-			<button class="dropbtn">Spring 
-			  <i class="fa fa-caret-down"></i>
-			</button>
-		<div class="dropdown-content">
-		  <a href="addEmployee.html">IOC</a>
-		  <a href="#">MVC</a>
-		  <a href="#">Transaction</a>
-		  <a href="#">Security</a>
-		</div>
-		</div> 
-		<a href="#about">SQL</a>
-		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-	</div>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-
+	
 
 
 	</body>
