@@ -103,3 +103,8 @@ tr:nth-child(even){background-color: #f2f2f2}
     text-align: left;
   }
 }
+
+.footer_copyright{
+	font-family: arial;
+	font-size: 13px;
+}

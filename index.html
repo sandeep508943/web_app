@@ -1,137 +1,110 @@
-<!DOCTYPE html>
 <html>
 	<head>
-		<title>HR Web Application</title>
-		<link rel="stylesheet" href="style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="jscode.js"></script>
+		<title>Home Page</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+		<link rel="stylesheet" href="mycss.css"></link>
 	</head>
 	<body>
-		<table>
+		<table id="pageHeaderTable" border="0" width="100%">
 			<tr>
-				<td>
-					<table>
-						<tr>
-							<td width="70%">
-								<br />
-								<h2>Overview of the HR Web Application</h2></br>
-								The HR Web Application is intended to give you access to information related to all employees of AnyCo Corporation.
-								<br /><br />The two types of users that will be able to access this application are:
-								<ui>
-									<li>HRStaff</li>
-									<li>HR Admin</li>
-								</ui>	
-								<br />	
-								The HRStaff and HRAdmin accounts have different privileges.
-								HRStaff has read only access to the application and does not have privileges to update/delete an employee record. HRStaff can only List the employees and Search by Employee ID.
-								<br />
-								<br />
-								The HRAdmin, has complete control on the application and has read and write privileges. HRAdmin is the only user who has access to all functionalities of the application such as update/delete an employee record, or provide salary increment for all employees.
-							</td>
-							<td width="30%" style="align:right;">
-								<form>
-									<table>
-										<tr>
-											<td><label class="logintextlabel"> Username : </label></td>
-											<td><input type="text" id="loginid" placeholder="Enter Your Login ID" class="logintextbox" /></td>
-										</tr>
-										<tr>
-											<td><label class="logintextlabel">Password :</label></td>
-											<td><input type="password" id="passwordid" placeholder="Enter Your Password" class="logintextbox" /></td>
-										</tr>
-										<tr>
-											<td colspan="2"><center><button onclick="loginValidate()" class="loginbutton">Login</button></center></td>
-										</tr>
-										<tr>
-											<td collspan="2">
-											<a href="#">User Registration</a></td>
-										</tr>
-										<tr>
-											<td collspan="2"><a href="#">Forget Password</a></td>
-										</tr>
-									</table>
-								</form>
-							</td>
-						</tr>
-					</table>
-				</td>
+				<td><img src="logo.png" height="90px" width="150px"/></td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr>
-				<td>
-					<br /><br />
-					<center><hr />All Right Reserved to Siyanshi Softwards, Bangalore</center>
-					<br /><br/>
-					
-					<table border="0">
-					<tr>
-						<td colspan="3">
-							<label>Enter Employee's CTC</label>
-							<input type="text" id="ctc" placeholder="Enter CTC..."/>
-							<button onclick="getBreakup()">Get breakup</button>
-						</td>
-					</tr>
-					<tr>
-						<td>Basic</td>
-						<td class="amount"><label id="ctcvalueM" /></td>
-						<td class="amount"><label id="ctcvalue" /></td>
-					</tr>
-					<tr>
-						<td>HRA</td>
-						<td class="amount"><label id="hravalueM" /></td>
-						<td class="amount"><label id="hravalue" /></td>
-					</tr>
-					<tr>
-						<td>Transport</td>
-						<td class="amount"><label id="transportvalueM" /></td>
-						<td class="amount"><label id="transportvalue" /></td>
-					</tr>
-					<tr>
-						<td>Medical</td>
-						<td class="amount"><label id="medicalvalueM" /></td>
-						<td class="amount"><label id="medicalvalue" /></td>
-					</tr>
-					<tr>
-						<td>LTA</td>
-						<td class="amount"><label id="ltavalueM" /></td>
-						<td class="amount"><label id="ltavalue" /></td>
-					</tr>
-					<tr>
-						<td>Special</td>
-						<td class="amount"><label id="specialvalueM" /></td>
-						<td class="amount"><label id="specialvalue" /></td>
-					</tr>
-					<tr>
-						<td>Gross</td>
-						<td class="amount"><label id="grossvalueM" /></td>
-						<td class="amount"><label id="grossvalue" /></td>
-					</tr>
-				</table>
+				<td colspan="3">
+					<div class="topnav" id="myTopnav">
+						<a href="index.html" class="active">Home</a>
+						<div class="dropdown">
+							<button class="dropbtn">CORE Java 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="ExceptionHandling.html">Introduction</a>
+							  <a href="ExceptionHandling.html">Object Oriented Programming</a>
+							  <a href="ExceptionHandling.html">Polymorphism</a>
+							  <a href="ExceptionHandling.html">Interface & Abstract Class</a>
+							  <a href="ExceptionHandling.html">I/O Streams, Serialization</a>
+							  <a href="ExceptionHandling.html">Exception Handling</a>
+							  <a href="ExceptionHandling.html">Inheritence</a>
+							  <a href="ExceptionHandling.html">String</a>
+							  <a href="ExceptionHandling.html">Reflection</a>
+							  <a href="#">Multithreading</a>
+							  <a href="#">Collection Framework</a>
+							  <a href="#">Java 8</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<a href="#contact">JDBC</a>
+						<div class="dropdown">
+							<button class="dropbtn">Servlet 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="#">Introduction</a>
+							  <a href="#">Servlet Life Cycle</a>
+							  <a href="#">Request Dispatcher</a>
+							  <a href="#">Session Management</a>
+							  <a href="#">Cookies</a>
+							  <a href="#">URL Rewritting</a>
+							  <a href="#">Hidden Fields</a>
+							  <a href="#">Filter</a>
+							  <a href="#">Event and Listener</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="dropbtn">JSP 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="#">Introduction</a>
+							  <a href="#">Implicit Objects</a>
+							  <a href="#">Scripting Elements</a>
+							  <a href="#">Directives</a>
+							  <a href="#">EL Expressions</a>
+							  <a href="#">Scope</a>
+							  <a href="#">JSTL</a>
+							  <a href="#">Custom Tags</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<a href="#contact">JSF</a>
+						<a href="#contact">Hibernate</a>
+						<div class="dropdown">
+							<button class="dropbtn">Spring 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="addEmployee.html">IOC</a>
+							  <a href="#">MVC</a>
+							  <a href="#">Transaction</a>
+							  <a href="#">Security</a>
+							</div>
+						</div> 
+						<a href="#about">SQL</a>
+						<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+					</div>
 				</td>
 			</tr>
-		</table>
-			
-		<table id="tblCustomers" cellpadding="0" cellspacing="0" border="1">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Team</th>
-                <th>Role</th>
-                <th>Age</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td><input type="text" id="txtName" /></td>
-                <td><input type="text" id="txtTeam" /></td>
-                <td><input type="text" id="txtRole" /></td>
-                <td><input type="text" id="txtAge" /></td>
-                <td><input type="button" onclick="Add()" value="Add" /></td>
-            </tr>
-        </tfoot>
 		</table>
 		
+		<table height="70%" width="100%">
+			<tr>
+				<td width="5%"></td>
+				<td>
+					<img src="edu.jpg" width="65%" height="50%" align="right"/>
+				</td>
+				<td width="5%"></td>
+			</tr>
+		</table>
+		
+		<table id="pageFooterTable" width="100%">	
+			<tr>
+				<td>
+					<center><hr width="100%"/><label class="footer_copyright"> All right reserved @Siyanshi Softwares, Bangalore </label></center>
+				</td>
+			</tr>
+		</table>
 	</body>
 </html>
