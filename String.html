@@ -1,0 +1,486 @@
+<html>
+	<head>
+		<title>Home Page</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+		<link rel="stylesheet" href="mycss.css"></link>
+	</head>
+	<body>
+		<table id="pageHeaderTable" border="0" width="100%">
+			<tr>
+				<td><img src="logo.png" height="90px" width="150px"/></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div class="topnav" id="myTopnav">
+						<a href="index.html" class="active">Home</a>
+						<div class="dropdown">
+							<button class="dropbtn">CORE Java 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="ExceptionHandling.html">Introduction</a>
+							  <a href="ExceptionHandling.html">Object Oriented Programming</a>
+							  <a href="ExceptionHandling.html">Polymorphism</a>
+							  <a href="ExceptionHandling.html">Interface & Abstract Class</a>
+							  <a href="ExceptionHandling.html">I/O Streams, Serialization</a>
+							  <a href="ExceptionHandling.html">Exception Handling</a>
+							  <a href="ExceptionHandling.html">Inheritence</a>
+							  <a href="ExceptionHandling.html">String</a>
+							  <a href="ExceptionHandling.html">Reflection</a>
+							  <a href="#">Multithreading</a>
+							  <a href="#">Collection Framework</a>
+							  <a href="#">Java 8</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<a href="#contact">JDBC</a>
+						<div class="dropdown">
+							<button class="dropbtn">Servlet 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="#">Introduction</a>
+							  <a href="#">Servlet Life Cycle</a>
+							  <a href="#">Request Dispatcher</a>
+							  <a href="#">Session Management</a>
+							  <a href="#">Cookies</a>
+							  <a href="#">URL Rewritting</a>
+							  <a href="#">Hidden Fields</a>
+							  <a href="#">Filter</a>
+							  <a href="#">Event and Listener</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="dropbtn">JSP 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="#">Introduction</a>
+							  <a href="#">Implicit Objects</a>
+							  <a href="#">Scripting Elements</a>
+							  <a href="#">Directives</a>
+							  <a href="#">EL Expressions</a>
+							  <a href="#">Scope</a>
+							  <a href="#">JSTL</a>
+							  <a href="#">Custom Tags</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<a href="#contact">JSF</a>
+						<a href="#contact">Hibernate</a>
+						<div class="dropdown">
+							<button class="dropbtn">Spring 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="addEmployee.html">IOC</a>
+							  <a href="#">MVC</a>
+							  <a href="#">Transaction</a>
+							  <a href="#">Security</a>
+							</div>
+						</div> 
+						<a href="#about">SQL</a>
+						<a href="#about">JUnit</a>
+						<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		<table height="70%" width="100%">
+			<tr>
+				<td width="7%"></td>
+				<td>
+					<center>String / StringBuffer / StringBuilder</center>
+					<br /></br />
+
+String	Final	Immutable	Not Synchronized	Fast	1.0
+StringBuilder	Final	Muttable	Not Synchronized	Fast	1.5
+StringBuffer	Final	Muttable	Synchronized	Slow	1.2
+
+String is a Class in java and defined in java.lang package. It’s not a primitive data type like int and long. String class represents character Strings. String in immutable and final in Java and JVM uses String Pool to store all the String objects. We can instantiate a String object using double quotes and overloading of “+” operator for concatenation.
+
+String str = “Sandeep Kumar”;
+String str = new String(“Sandeep Kumar”);
+
+When we create a String using double quotes, JVM looks in the String pool to find if any other String is stored with same value. If found, it just returns the reference to that String object else it creates a new String object with given value and stores it in the String pool.
+
+When we use new operator, JVM creates the String object but don’t store it into the String Pool. We can use intern() method to store the String object into String pool or return the reference if there is already a String with equal value present in the pool.
+
+The default value of String variable is null.
+
+There are two ways to create String object:
+1.	By String Literal
+2.	By new Keyword
+String Literal
+Java String literal is created by using double quotes. For Example:    
+String s="welcome";  
+
+Each time we create a string literal, the JVM checks the string constant pool first. If the string already exists in the pool, a reference to the pooled instance is returned. If string doesn't exist in the pool, a new string instance is created and placed in the pool. For example:
+String s1="Welcome";  
+String s2="Welcome";   //will not create new instance  
+
+
+
+In the above example only one object will be created. Firstly JVM will not find any string object with the value "Welcome" in string constant pool, so it will create a new object. After that it will find the string with the value "Welcome" in the pool, it will not create new object but will return the reference to the same instance.
+Note: String objects are stored in a special memory area known as string constant pool.
+
+
+
+
+Why java uses concept of string literal?
+To make Java more memory efficient (because no new objects are created if it exists already in string constant pool).
+By new Keyword
+String s = new String("Welcome");   //creates two objects and one reference variable  
+In such case, JVM will create a new string object in normal(non pool) heap memory and the literal "Welcome" will be placed in the string constant pool. The variable s will refer to the object in heap(non pool).
+Java String Example
+public class StringExample{  
+public static void main(String args[]){  
+String s1="java";//creating string by java string literal  
+char ch[]={'s','t','r','i','n','g','s'};  
+String s2=new String(ch);//converting char array to string  
+String s3=new String("example");//creating java string by new keyword  
+System.out.println(s1);  
+System.out.println(s2);  
+System.out.println(s3);  
+}}  
+
+Test it Now
+java
+strings
+example
+Java String class methods
+The java.lang.String class provides many useful methods to perform operations on sequence of char values.
+No.	Method	Description
+1	char charAt(int index)
+returns char value for the particular index
+2	int length()
+returns string length
+3	static String format(String format, Object... args)
+returns formatted string
+4	static String format(Locale l, String format, Object... args)
+returns formatted string with given locale
+5	String substring(int beginIndex)
+returns substring for given begin index
+6	String substring(int beginIndex, int endIndex)
+returns substring for given begin index and end index
+7	boolean contains(CharSequence s)
+returns true or false after matching the sequence of char value
+8	static String join(CharSequence delimiter, CharSequence... elements)
+returns a joined string
+9	static String join(CharSequence delimiter, Iterable<? extends CharSequence> elements)
+returns a joined string
+10	boolean equals(Object another)
+checks the equality of string with object
+11	boolean isEmpty()
+checks if string is empty
+12	String concat(String str)
+concatinates specified string
+13	String replace(char old, char new)
+replaces all occurrences of specified char value
+14	String replace(CharSequence old, CharSequence new)
+replaces all occurrences of specified CharSequence
+15	static String equalsIgnoreCase(String another)
+compares another string. It doesn't check case.
+16	String[] split(String regex)
+returns splitted string matching regex
+17	String[] split(String regex, int limit)
+returns splitted string matching regex and limit
+18	String intern()
+returns interned string
+19	int indexOf(int ch)
+returns specified char value index
+20	int indexOf(int ch, int fromIndex)
+returns specified char value index starting with given index
+21	int indexOf(String substring)
+returns specified substring index
+22	int indexOf(String substring, int fromIndex)
+returns specified substring index starting with given index
+23	String toLowerCase()
+returns string in lowercase.
+24	String toLowerCase(Locale l)
+returns string in lowercase using specified locale.
+25	String toUpperCase()
+returns string in uppercase.
+26	String toUpperCase(Locale l)
+returns string in uppercase using specified locale.
+27	String trim()
+removes beginning and ending spaces of this string.
+28	static String valueOf(int value)
+converts given type into string. It is overloaded.
+What does String intern() method do?
+When the intern() method is invoked, if the pool already contains a string equal to this String object as determined by the equals(Object) method, then the string from the pool is returned. Otherwise, this String object is added to the pool and a reference to this String object is returned. This method always returns a String that has the same contents as this string, but is guaranteed to be from a pool of unique strings.
+What is Java String Pool?
+As the name suggests, String Pool is a pool of Strings stored in Java Heap Memory. We know that String is special class in java and we can create String object using new operator as well as providing values in double quotes.
+Here is a diagram which clearly explains how String Pool is maintained in java heap space and what happens when we use different ways to create Strings.
+ 
+String Pool is possible only because String is immutable in Java and it’s implementation of String interning concept. String pool helps in saving a lot of space for Java Runtime although it takes more time to create the String.
+When we use double quotes to create a String, it first looks for String with same value in the String pool, if found it just returns the reference else it creates a new String in the pool and then returns the reference.
+However using new operator, we force String class to create a new String object and then we can use intern() method to put it into the pool or refer to other String object from pool having same value.
+
+
+Why String is immutable in Java ?
+
+String is an immutable class in Java. An immutable class is simply a class whose instances cannot be modified. All information in an instance is initialized when the instance is created and the information can not be modified. There are many advantages of immutable classes. This article summarizes why String is designed to be immutable. A good answer depends on the deep understanding of memory, synchronization, data structures, etc.
+
+1. Requirement of String Pool
+String pool (String intern pool) is a special storage area in Method Area. When a string is created and if the string already exists in the pool, the reference of the existing string will be returned, instead of creating a new object and returning its reference.
+
+The following code will create only one string object in the heap.
+String string1 = "abcd";
+String string2 = "abcd";
+
+Here is how it looks:
+ 
+If a string is not immutable, changing the string with one reference will lead to the wrong value for the other references.
+2. Caching Hashcode
+The hashcode of the string is frequently used in Java. For example, in a HashMap. Being immutable guarantees that hashcode will always the same so that it can be cashed without worrying the changes. That means, there is no need to calculate hashcode every time it is used. This is more efficient.
+In String class, it has the following code:
+private int hash;//this is used to cache hash code. 
+3. Facilitating the Use of Other Objects
+To make this concrete, consider the following program:
+HashSet<String> set = new HashSet<String>();
+set.add(new String("a"));
+set.add(new String("b"));
+set.add(new String("c"));
+ 
+for(String a: set)
+     a.value = "a";
+
+In this example, if String is mutable, it's value can be changed which would violate the design of set (set contains unduplicated elements). This example is designed for simplicity sake, in the real String class there is no value field.
+
+4. Security
+String is widely used as a parameter for many java classes, e.g. network connection, opening files, etc. Were String not immutable, a connection or file would be changed and lead to a serious security threat. The method thought it was connecting to one machine, but was not. Mutable strings could cause a security problem in Reflection too, as the parameters are strings.
+Here is a code example:
+boolean connect(string s){
+    if (!isSecure(s)) { 
+throw new SecurityException(); 
+}
+    //here will cause problem, if s is changed before this by using other references.    
+    causeProblem(s);
+}
+5. Immutable objects are naturally thread-safe
+Because immutable objects can not be changed, they can be shared among multiple threads freely. This eliminates the requirements of doing synchronization.
+In summary, String is designed to be immutable for the sake of efficiency and security. This is also the reason why immutable classes are preferred in general.
+
+String Comparison
+We can compare string in java on the basis of content and reference.
+It is used in authentication (by equals() method), sorting (by compareTo() method), reference matching (by == operator) etc.
+
+There are three ways to compare String in Java:
+1.	By equals() method
+2.	By == operator
+3.	By compareTo() method
+1) String compare by equals() method
+The String equals() method compares the original content of the string. It compares values of string for equality. String class provides two methods:
+o	public boolean equals(Object another) compares this string to the specified object.
+o	public boolean equalsIgnoreCase(String another) compares this String to another string, ignoring case.
+class Teststringcomparison1{  
+ public static void main(String args[]){  
+   String s1="Sachin";  
+   String s2="Sachin";  
+   String s3=new String("Sachin");  
+   String s4="Saurav";
+   String s5="SACHIN";
+   System.out.println(s1.equals(s2)); //true  
+   System.out.println(s1.equals(s3)); //true  
+   System.out.println(s1.equals(s4)); //false  
+   System.out.println(s1.equals(s5)); //false
+   System.out.println(s1.equalsIgnourCase(s5)); //true  
+ }  
+}  
+
+Test it Now
+Output:true
+       true
+       false
+       false
+       true
+
+Using == operator
+== operator compares two object references to check whether they refer to same instance. This also, will return true on successful match.
+String s1 = "Java";
+String s2 = "Java";
+String s3 = new string ("Java");
+test(s1 == s2)     //true
+test(s1 == s3)      //false
+Reason:
+Its because we are creating a new object using new operator, and thus it gets created in a non-pool memory area of the heap. s1 is pointing to the String in string pool while s3 is pointing to the String in heap and hence, when we compare s1 and s3, the answer is false.
+The following image will explain it more clearly.
+ 
+
+
+By compareTo() method
+compareTo() method compares values and returns an int which tells if the string compared is less than, equal to or greater than the other string. It compares the String based on natural ordering i.e alphabetically. Its general syntax is,
+int compareTo(String str)
+String s1 = "Abhi";
+String s2 = "Viraaj";
+String s3 = "Abhi";
+s1.compareTo(S2);     //return -1 because s1 < s2 
+s1.compareTo(S3);     //return 0 because s1 == s3 
+s2.compareTo(s1);     //return 1 because s2 > s1
+
+Java String compare
+
+
+Click here for more about equals() method
+3) String compare by compareTo() method
+The String compareTo() method compares values lexicographically and returns an integer value that describes if first string is less than, equal to or greater than second string.
+Suppose s1 and s2 are two string variables. If:
+o	s1 == s2 :0
+o	s1 > s2   :positive value
+o	s1 < s2   :negative value
+1.	class Teststringcomparison4{  
+2.	 public static void main(String args[]){  
+3.	   String s1="Sachin";  
+4.	   String s2="Sachin";  
+5.	   String s3="Ratan";  
+6.	   System.out.println(s1.compareTo(s2));//0  
+7.	   System.out.println(s1.compareTo(s3));//1(because s1>s3)  
+8.	   System.out.println(s3.compareTo(s1));//-1(because s3 < s1 )  
+9.	 }  
+10.	}  
+Test it Now
+Output:0
+       1
+       -1
+
+
+Q. How to ways we can convert Integer to String in Java?
+Ans. : There 4 ways to convert Integer to String
+
+Integer num = new Integer(100);
+Syntax	Example
+String.valueOf(int arg);	String.valueOf(num);
+Integer.toString();	num.toString();
+String Concatenation	String = “ ” + num;
+String.format();	String.valueOf(“%d”, num);
+
+What is special about string objects as compared to objects of other derived types?
+One special thing about string objects is that you can create string objects without using new operator i.e using string literals. This is not possible with other derived types (except wrapper classes). One more special thing about strings is that you can concatenate two string objects using ‘+’. This is the relaxation java gives to string objects as they will be used most of the time while coding. And also java provides string constant pool to store the string objects.
+Why StringBuffer and StringBuilder classes are introduced in java when there already exist String class to represent the set of characters?
+The objects of String class are immutable in nature. i.e you can’t modify them once they are created. If you try to modify them, a new object will be created with modified content. This may cause memory and performance issues if you are performing lots of string modifications in your code. To overcome these issues, StingBuffer and StringBuilder classes are introduced in java
+ 
+					<br /><br />
+
+Why use inheritance in java: <br />
+•	For Method Overriding (so runtime polymorphism can be achieved). <br />
+•	For Code Reusability. <br />
+•	Save development and testing efforts. <br />
+•	Minimize the amount of duplicate code. <br />
+
+StringBuffer :  (final, thread-safe, mutable, synchronized, reliable result, take more time than StringBuilder)
+
+•	Java StringBuffer class is used to created mutable (modifiable) string. The StringBuffer class in java is same as String class except it is mutable.
+•	StringBuffer class objects are Mutable, so they can be modified.
+•	StringBuffer class in added JDK 1.2 Version and available in java.lang Package.
+•	Java StringBuffer class is thread-safe i.e. multiple threads cannot access it simultaneously. So it is safe and will result in an order.
+•	Implementing the Synchronization mechanism will take some time for the JVM. Hence StringBuffer will take more execution time than StringBuilder.
+•	Memory Allocation :
+	Default Capacity : 16, next time : 16*2+2= 34,  next time : 34*2+2=70,  next time : 70*2+2=142
+Important Constructors of StringBuffer class
+1.	StringBuffer(): creates an empty string buffer with the initial capacity of 16.
+2.	StringBuffer(String str): creates a string buffer with the specified string.
+3.	StringBuffer(int capacity): creates an empty string buffer with the specified capacity as length.
+4.	StringBuffer(CharSequence seq): Constructs a string buffer that contains the same characters as the specified CharSequence.
+public class StringBufferLab {
+
+	public static void main(String[] args) {
+		
+		StringBuffer buffer = new StringBuffer();
+
+		/*The capacity() method of StringBuffer class returns the current capacity of the buffer. 
+		 * The default capacity of the buffer is 16. If the number of character increases from its 
+current capacity, it increases the capacity by (oldcapacity*2)+2.*/
+		System.out.println(buffer.capacity());  // Output: 16 
+		
+		
+/*The ensureCapacity() method of StringBuffer class ensures that the given capacity is the minimum to the current capacity. If it is greater than the current capacity, it increases the capacity by (oldcapacity*2)+2. 
+		For example if your current capacity is 16, it will be (16*2)+2=34.*/
+		buffer.ensureCapacity(10);
+		
+		// buffer = "Sandeep";  Can't convert String to StringBuffer in this way.
+		
+		buffer.append("Sandeep Kumar");  // Output: Sandeep Kumar
+		System.out.println(buffer);
+		
+		buffer.insert(8, "Bangalore ");   // Output: Sandeep Bangalore Kumar
+		System.out.println(buffer);
+	
+		buffer.replace(3, 5, "xyz");	// Output: Sanxyzep Bangalore Kumar
+		System.out.println(buffer);
+		
+		buffer.delete(5, 10);			// Output: Sanxyangalore Kumar
+		System.out.println(buffer);
+		
+		buffer.reverse();			// Output: ramuK erolagnayxnaS
+		System.out.println(buffer);
+	}
+}
+
+
+StringBuilder : (Final, Mutable, not Synchronized, Add new in JDK 1.5)
+
+•	Java StringBuilder class is used to create mutable (modifiable) string. The Java StringBuilder class is same as StringBuffer class except that it is non-synchronized.
+•	Added in JDK 1.5 and available in java.lang Package.
+•	StringBuilder is not Synchronized, it allows several threads to act on it simultaneously.  
+•	This class is designed for use as a drop-in replacement for StringBuffer in places where the string buffer was being used by a single thread (as is generally the case)
+•	Memory Allocation :
+	Default Capacity : 16, next time : 16*2+2= 34,  next time : 34*2+2=70,  next time : 70*2+2=142
+Important Constructors of StringBuilder class
+1.	StringBuilder(): creates an empty string Builder with the initial capacity of 16.
+2.	StringBuilder(String str): creates a string Builder with the specified string.
+3.	StringBuilder(int length): creates an empty string Builder with the specified capacity as length.
+4.	StringBuffer(CharSequence seq): Constructs a string buffer that contains the same characters as the specified CharSequence.
+
+public class StringLab {
+	public static void main(String[] args) {
+
+		String str = "Sandeep";
+		String s = new String("Sandeep");
+		StringBuffer buffer = new StringBuffer("Sandeep");
+		StringBuilder builder = new StringBuilder("Sandeep");
+		
+		System.out.println(str == s);    // Output:    false
+		// System.out.println(str == buffer);     will give you compile time error
+		// System.out.println(str == builder);   will give you compile time error
+		System.out.println(s == str);    // Output:    false
+		// System.out.println(s == buffer);		  will give you compile time error
+		// System.out.println(s == builder);   will give you compile time error
+		// System.out.println(buffer == builder);	  will give you compile time error
+		// System.out.println(builder == str);    will give you compile time error
+		
+		System.out.println(str.equals(s));		// Output: true
+		System.out.println(str.equals(buffer));     // Output:    false     
+		System.out.println(s.equals(buffer));		 // Output:    false
+		System.out.println(buffer.equals(builder));	  // Output:    false
+		System.out.println(builder.equals(str));     // Output:    false
+		
+		System.out.println(s.intern().equals(str));    // Output:   true
+		// StringBuilder and StringBuffer do not intern() method
+		System.out.println(builder.equals(str.intern()));   // Output:  false
+		System.out.println(buffer.equals(s));   // Output:  false
+		System.out.println(str.equals(builder));   // Output:  false
+	
+	}
+}
+
+
+<br />
+				</td>
+				<td width="7%"></td>
+			</tr>
+		</table>
+					
+				<table id="pageFooterTable" width="100%">	
+			<tr>
+				<td>
+					<center><hr width="100%"/><label class="footer_copyright"> All right reserved @Siyanshi Softwares, Bangalore <br /><br /><br /></label></center>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,465 +1,238 @@
 <html>
 	<head>
 		<title>Home Page</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<style>
-
-tr:nth-child(even){background-color: #f2f2f2}
-			body {margin:0;font-family:Arial}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 15px;    
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 6px 8px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}	
-		</style>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+		<link rel="stylesheet" href="mycss.css"></link>
 	</head>
-	<script src="https://www.w3schools.com/lib/w3.js"></script>
 	<body>
-		<table>
+		<table id="pageHeaderTable" border="0" width="100%">
 			<tr>
-				<td width="20%"><img src="logo.png" height="100px" width="180px"/></td>
-				<td width="80%"></td>
-				<td width="20%"></td>
-			</tr>
-			<td colspan="3">
-				<div class="topnav" id="myTopnav">
-					<a href="index.html" class="active">Home</a>
-					<div class="dropdown">
-						<button class="dropbtn">CORE Java 
-						  <i class="fa fa-caret-down"></i>
-						</button>
-						<div class="dropdown-content">
-						  <a href="addEmployee.html">Exception Handling</a>
-						  <a href="#">Multithreading</a>
-						  <a href="#">Collection</a>
-						  <a href="#">Interview Question-Answer</a>
-						</div>
-					</div>
-					<a href="#contact">JDBC</a>
-					<a href="#contact">Servlet</a>
-					<a href="#contact">JSP</a>
-					<a href="#contact">JSF</a>
-					<a href="#contact">Hibernate</a>
-					<div class="dropdown">
-						<button class="dropbtn">Spring 
-						  <i class="fa fa-caret-down"></i>
-						</button>
-						<div class="dropdown-content">
-						  <a href="addEmployee.html">IOC</a>
-						  <a href="#">MVC</a>
-						  <a href="#">Transaction</a>
-						  <a href="#">Security</a>
-						</div>
-					</div> 
-					<a href="#about">SQL</a>
-					<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-				</div>
-			</td>
-			<tr>
+				<td><img src="logo.png" height="90px" width="150px"/></td>
 				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div class="topnav" id="myTopnav">
+						<a href="index.html" class="active">Home</a>
+						<div class="dropdown">
+							<button class="dropbtn">CORE Java 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="ExceptionHandling.html">Introduction</a>
+							  <a href="ExceptionHandling.html">Object Oriented Programming</a>
+							  <a href="ExceptionHandling.html">Polymorphism</a>
+							  <a href="ExceptionHandling.html">Interface & Abstract Class</a>
+							  <a href="ExceptionHandling.html">I/O Streams, Serialization</a>
+							  <a href="ExceptionHandling.html">Exception Handling</a>
+							  <a href="ExceptionHandling.html">Inheritence</a>
+							  <a href="ExceptionHandling.html">String</a>
+							  <a href="ExceptionHandling.html">Reflection</a>
+							  <a href="#">Multithreading</a>
+							  <a href="#">Collection Framework</a>
+							  <a href="#">Java 8</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<a href="#contact">JDBC</a>
+						<div class="dropdown">
+							<button class="dropbtn">Servlet 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="#">Introduction</a>
+							  <a href="#">Servlet Life Cycle</a>
+							  <a href="#">Request Dispatcher</a>
+							  <a href="#">Session Management</a>
+							  <a href="#">Cookies</a>
+							  <a href="#">URL Rewritting</a>
+							  <a href="#">Hidden Fields</a>
+							  <a href="#">Filter</a>
+							  <a href="#">Event and Listener</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="dropbtn">JSP 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="#">Introduction</a>
+							  <a href="#">Implicit Objects</a>
+							  <a href="#">Scripting Elements</a>
+							  <a href="#">Directives</a>
+							  <a href="#">EL Expressions</a>
+							  <a href="#">Scope</a>
+							  <a href="#">JSTL</a>
+							  <a href="#">Custom Tags</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<a href="#contact">JSF</a>
+						<a href="#contact">Hibernate</a>
+						<div class="dropdown">
+							<button class="dropbtn">Spring 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="addEmployee.html">IOC</a>
+							  <a href="#">MVC</a>
+							  <a href="#">Transaction</a>
+							  <a href="#">Security</a>
+							</div>
+						</div> 
+						<a href="#about">SQL</a>
+						<a href="#about">JUnit</a>
+						<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		<table height="70%" width="100%">
+			<tr>
+				<td width="7%"></td>
 				<td>
-					An exception (or exceptional event) is a problem that arises during the execution of a program. When an Exception occurs the normal flow of the program is disrupted and the program/Application terminates abnormally, which is not recommended, therefore these exceptions are to be handled.
-A bunch of things can lead to exceptions, including programmer error, a user has entered invalid data, hardware failures, files that need to be opened cannot be found, resource exhaustion, a network connection has been lost in the middle of communications or the JVM has run out of memory etc.
-The core advantage of exception handling is to maintain the normal flow of the application. Exception normally disrupts the normal flow of the application that is why we use exception handling.
-Exception
-A Java Exception is an object that describes the exception that occurs in a program. When an exceptional event occurs in java, an exception is said to be thrown. The code that's responsible for doing something about the exception is called an exception handler.
-Exception class Hierarchy
-All exception types are subclasses of class Throwable, which is at the top of exception class hierarchy.
+					<br />
+					<center>Exception Handling</center>
+					<br /></br />
+					An exception is a problem that arises during the execution of a program. When an Exception occurs the normal flow of the program is disrupted and the program/application terminates abnormally. These exceptions are to be handled.<br /> 
+There are so many causes which lead to exception like including programmer error, a user has entered invalid data, hardware failures, files that need to be opened cannot be found, resource exhaustion, a network connection has been lost in the middle of communications or the JVM has run out of memory etc.
+
+<br /><br />
                                     
-Types of Exception
-There are mainly two types of exceptions: checked and unchecked where error is considered as unchecked exception. The sun microsystem says there are three types of exceptions:
-1.	Checked Exception / Compile Time Exception
-2.	Unchecked Exception / Run Time Exception
+There are mainly two types of exceptions: checked and unchecked where error is considered as unchecked exception. <br />The sun microsystem says there are three types of exceptions:<br /><br />
+1.	Checked Exception / Compile Time Exception<br />
+2.	Unchecked Exception / Run Time Exception<br />
 3.	Error
 
-Checked Exception / Compile time Exception :  The Exceptions that are checked at Compilation Time by the Java Compiler is called Checked Exception or Compile time Exception. These exceptions cannot simply be ignored at the time of compilation, the Programmer should take care of (handle) these exceptions. Checked Exception force the programmer to catch them explicitly in try-catch block.
+<br /><br />
+Checked Exception / Compile time Exception :  The Exceptions that are checked at Compilation Time by the Java Compiler is called Checked Exception or Compile time Exception. These exceptions cannot simply be ignored at the time of compilation, the Programmer should t ake care of (handle) these exceptions. Checked Exception force the programmer to catch them explicitly in try-catch block.
 
-For example FileNotFoundException. We should catch this exception and provide useful message to user and log it properly for debugging purpose.  
+<br /><br />
 
-List of checked exception
-•	ClassNotFoundException Class not found.
-•	CloneNotSupportedException Attempt to clone an object that does not implement theCloneable interface.
-•	IllegalAccessException Access to a class is denied.
-•	InstantiationException Attempt to create an object of an abstract class or interface.
-•	InterruptedException One thread has been interrupted by another thread.
-•	NoSuchFieldException A requested field does not exist.
-•	NoSuchMethodException A requested method does not exist.
+List of checked exception <br /><br />
+•	ClassNotFoundException Class not found.<br />
+•	CloneNotSupportedException Attempt to clone an object that does not implement theCloneable interface.<br />
+•	IllegalAccessException Access to a class is denied.<br />
+•	InstantiationException Attempt to create an object of an abstract class or interface.<br />
+•	InterruptedException One thread has been interrupted by another thread.<br />
+•	NoSuchFieldException A requested field does not exist.<br />
+•	NoSuchMethodException A requested method does not exist.<br />
+ <br /><br />
+Unchecked Exception / Runtime Exception :  The Exceptions that are checked by JVM at runtime. Runtime exceptions are ignored at the time of compilation. The compiler does not check for such type of exceptions. Runtime Exceptions occur due to program bugs and include exceptions such as division by zero and invalid array indexing.<br /><br />
 
-Unchecked Exception / Runtime Exception :  The Exceptions that are checked by JVM at runtime. Runtime exceptions are ignored at the time of compilation. The compiler does not check for such type of exceptions. Runtime Exceptions occur due to program bugs and include exceptions such as division by zero and invalid array indexing.
-For example, if you have declared an array of size 5 in your program, and trying to call the 6th element of the array then an ArrayIndexOutOfBoundsExceptionexception occurs.
-List of unchecked exception
-•	ArithmeticException Arithmetic error, such as divide-by-zero.
-•	ArrayIndexOutOfBoundsException Array index is out-of-bounds.
-•	ArrayStoreException Assignment to an array element of an incompatible type.
-•	ClassCastException Invalid cast.
-•	IllegalArgumentException Illegal argument used to invoke a method.
-•	IllegalMonitorStateException Illegal monitor operation, such as waiting on an unlocked thread.
-•	IllegalStateException Environment or application is in incorrect state.
-•	IllegalThreadStateException Requested operation not compatible with current thread state.
-•	IndexOutOfBoundsException Some type of index is out-of-bounds.
-•	NegativeArraySizeException Array created with a negative size.
-•	NullPointerException Invalid use of a null reference.
-•	NumberFormatException Invalid conversion of a string to a numeric format.
-•	SecurityException Attempt to violate security.
-•	StringIndexOutOfBounds Attempt to index outside the bounds of a string.
-•	UnsupportedOperationException An unsupported operation was encountered.
+List of unchecked exception<br />
+•	ArithmeticException Arithmetic error, such as divide-by-zero.<br />
+•	ArrayIndexOutOfBoundsException Array index is out-of-bounds.<br />
+•	ArrayStoreException Assignment to an array element of an incompatible type.<br />
+•	ClassCastException Invalid cast.<br />
+•	IllegalArgumentException Illegal argument used to invoke a method.<br />
+•	IllegalMonitorStateException Illegal monitor operation, such as waiting on an unlocked thread.<br />
+•	IllegalStateException Environment or application is in incorrect state.<br />
+•	IllegalThreadStateException Requested operation not compatible with current thread state.<br />
+•	IndexOutOfBoundsException Some type of index is out-of-bounds.<br />
+•	NegativeArraySizeException Array created with a negative size.<br />
+•	NullPointerException Invalid use of a null reference.<br />
+•	NumberFormatException Invalid conversion of a string to a numeric format.<br />
+•	SecurityException Attempt to violate security.<br />
+•	StringIndexOutOfBounds Attempt to index outside the bounds of a string.<br />
+•	UnsupportedOperationException An unsupported operation was encountered.<br />
 
-
+<br /><br />
 *  Difference between Error and Exception :
+<br /><br />
+	Exception is an error which can be handled at runtime but Error is an error which can not handled.<br />
+	Exception is related to the application and Error is related to the environment in which the application is running.<br />
+	Exception can be Built-in or User Defined but Error is always Built-in.<br /> 
+	For Handling Exception we can use try, catch, throws keyword but not with Error.<br />
+	Exception can be checked or unchecked but Errors are always unchecked.<br /><br /><br />  
 
-	Exception is an error which can be handled at runtime but Error is an error which can not handled.
-	Exception is related to the application and Error is related to the environment in which the application is running.
-	Exception can be Built-in or User Defined but Error is always Built-in. 
-	For Handling Exception we can use try, catch, throws keyword but not with Error.
-	Exception can be checked or unchecked but Errors are always unchecked.  
+In java, exception handling is done using five keywords.
 
-RuntimeException - RuntimeException is the super class of those exceptions that can be thrown during the normal operation of the Java Virtual Machine. 
-A method is not required to declare in its throws clause any subclasses of RuntimeException that might be thrown during the execution of the method but not caught. 
-Internal working of java try-catch block
- 
-The JVM firstly checks whether the exception is handled or not. If exception is not handled, JVM provides a default exception handler that performs the following tasks:
-•	Prints out exception description.
-•	Prints the stack trace (Hierarchy of methods where the exception occurred).
-•	Causes the program to terminate.
-But if exception is handled by the application programmer, normal flow of the application is maintained i.e. rest of the code is executed.
-Chained Exception
-Chained Exception was added to Java in JDK 1.4. This feature allow us to relate one exception with another exception, i.e one exception describes cause of another exception. For example, consider a situation in which a method throws an ArithmeticException because of an attempt to divide by zero but the actual cause of exception was an I/O error which caused the divisor to be zero. The method will throw only ArithmeticException to the caller. So the caller would not come to know about the actual cause of exception. Chained Exception is used in such type of situations.
-Two new constructors and two methods were added to Throwable class to support chained exception.
-1.	Throwable( Throwable cause )
-2.	Throwable( String str, Throwable cause )
+<br /><br />
 
-In the first form, the parameter cause specifies the actual cause of exception. In the second form, it allows us to add an exception description in string form with the actual cause of exception.
-getCause() and initCause() are the two methods added to Throwable class.
-•	getCause() method returns the actual cause associated with current exception.
-•	initCause() set an underlying cause(exception) with invoking exception.
-Example
-
-import java.io.IOException;
-public class ChainedException {
-  public static void divide(int a, int b) {
-   if(b==0) {
-    ArithmeticException ae = new ArithmeticException("top layer");
-    ae.initCause( new IOException("cause") );
-    throw ae;
-   }
-   else {
-    System.out.println(a/b);
-   }
-  }
- public static void main(String[] args) {
-  try {
-   divide(5, 0);
-  } 
-  catch(ArithmeticException ae) {
-   System.out.println( "caught : " +ae);
-   System.out.println("actual cause: "+ae.getCause());
-  }
- }
-}
-output
-caught:java.lang.ArithmeticException: top layer
-actual cause: java.io.IOException: cause
-Exception Handling Mechanism
-Exception handling is done by transferring the execution of a program to an appropriate exception handler when exception occurs. In java, exception handling is done using five keywords.
 Throws	A throws cause lists the types of exceptions that a method might throw. 
 This is necessary for all exceptions, except those of type ERROR or Runtime Exception.
 All other Exceptions that a method can throw must be declared in the throws clause. If they are not, a  compile-time error will result.    
 
+<br /><br />
 throw
 	We can throw an Exception explicitly, using ‘throw’ statement. throw keyword is used to throw exception to the runtime to handle it.
+	
+<br /><br />
+	
 finally 	finally block is optional and can be used only with try-catch block. Since exception halts the process of execution, we might have some resources open that will not get closed, so we can use finally block. finally block gets executed always, whether exception occurred or not.
+
+<br /><br />
 
 Catch	Java catch block is used to handle the Exception. It must be used after the try block only.
 We can use multiple catch block with a single try.
 
+<br /><br />
+
 Try	Java try block is used to enclose the code that might throw an exception. It must be used within the method. Java try block must be followed by either catch or finally block.
 
+<br /><br /><br />
 
-Important points to Remember
+Important points to Remember <br /><br />
 1.	We can’t have catch or finally clause without a try statement.
+<br />
 2.	A try statement should have either catch block or finally block, it can have both blocks.
+<br />
 3.	We can’t write any code between try-catch-finally block.
+<br />
 4.	We can have multiple catch blocks with a single try statement.
+<br />
 5.	try-catch blocks can be nested similar to if-else statements.
+<br />
 6.	We can have only one finally block with a try-catch statement.
+<br />
 7.	If we do not explicitly use the try-catch blocks in our program, java will provide a default exception handler, which will print the exception details on the terminal, whenever exception occurs.
+<br />
 8.	Super class Throwable overrides toString() function, to display error message in form of string.
+<br />
 9.	While using multiple catch block, always make sure that exception subclasses comes before any of their super classes. Else we will get compile time error.
+<br />
 10.	In nested try catch, the inner try block, uses its own catch block as well as catch block of the outer try, if required.
+<br />
 11.	Only the object of Throwable class or its subclasses can be thrown.
+<br />
 12.	We can catch more than one Exception in a single catch block.
+<br />
 13.	Chained Exception was added to Java in JDK 1.4. This feature allow us to relate one exception with another exception, i.e one exception describes cause of another exception.
+<br />
 14.	Exception object will be garbage collected after Exception Handling.
+<br />
 15.	The subclass exception should precede the base class exception when used within the catch clause.
+<br />
 16.	The catch block throw the exception caught by itself this is called rethrowing of the exception by catch block.
 try { 
 }
 Catch(Exception E){
      throw RuntimeException();     // called rethrowing
 }
+<br />
 17.	It is not considered as a good practice to write a single catch to catch all the exceptions because If we use the Superclass Exception in the catch block then we will not get the valuable information about each of the  
    	exception thrown during the execution, though we can find out the class of the exception occurred. Also it will 
    	reduce the readability of the code as the programmer will not understand what is the exact reason for putting  
    	the try-catch block.
-
+<br />
 18.	All the exceptions inherit a method printStackTrace() from the Throwable class. This method prints the stack  
    	trace from where the exception occurred. It prints the most recently entered method first and continues 
    	down, printing the name of each method as it works its way down the call stack from the top.
-
-  Exception Handling with Method Overriding in Java
-There are many rules if we talk about method overriding with exception handling. The Rules are as follows:
-
-
-Super Class Method Exception	Sub Class Method Exception	Output
-Does not declare any Exception
-void show(){}	Declare checked Exception
-void show() throws FileNotFoundException{}
-	Compile Time Error
-	Declare Unchecked Exception
-void show() throws ArithmeticException{}
-	Run Successfully
-Declared an any Exception
-void show() throws ArithmeticException{}	Declared Parent Exception of Super class method declared Exception
-void show() throws Exception{}
-	Compile Time Error 
-Declared an any Exception
-void show() throws ArithmeticException{}
-	Declared same Exception 
-void show() throws ArithmeticException{}	Run Successfully
-Declared an any Exception
-void show() throws Exception{}
-	Declared sub class Exception
-void show() throws ArithmeticException{}
-	Run Successfully
-Declared an any Exception
-void show() throws Exception{}	Declared without Exception
-void show() {}	Run Successfully
-
-
-  Java 7 Automatic Resource Management and Catch block improvements 
-
-If we are catching a lot of exceptions in a single try block, we will notice that catch block code looks very ugly and mostly consists of redundant code to log the error, keeping this in mind Java 7 one of the feature was improved catch block where we can catch multiple exceptions in a single catch block. The catch block with this feature looks like below:
-
-catch(IOException | SQLException | Exception ex){
-   logger.error(ex);
-   throw new MyException(ex.getMessage());
-}
-
-There are some constraints such as the exception object is final and we can’t modify it inside the catch block, read full analysis at Java 7 Catch Block Improvements.
-Most of the time, we use finally block just to close the resources and sometimes we forget to close them and get runtime exceptions when the resources are exhausted. These exceptions are hard to debug and we might need to look into each place where we are using that type of resource to make sure we are closing it. So java 7 one of the improvement was try-with-resources where we can create a resource in the try statement itself and use it inside the try-catch block. When the execution comes out of try-catch block, runtime environment automatically close these resources. Sample of try-catch block with this improvement is:
-try (MyResource mr = new MyResource())
-{
-    System.out.println("MyResource created in try-with-resources");
-} catch (Exception e) {
-    e.printStackTrace();
-}
-Try with Resource Example – Java 7 Feature for automatic resource management
-
-One of the Java 7 features is try-with-resources statement for automatic resource management. A resource is an object that must be closed once your program is done using it, like a File resource or JDBC resource for database connection or a Socket connection resource. Before Java 7, there was no auto resource management and we should explicitly close the resource once our work is done with it. Usually, it was done in the finally block of a try-catch statement. This approach used to cause memory leaks and performance hit when we forgot to close the resource.
-Let’s see a pseudo code snippet to understand this feature.
-Before Java 7:
-try{
-    //open resources like File, Database connection, Sockets etc
-} catch (FileNotFoundException e) {
-    // Exception handling like FileNotFoundException, IOException etc
-}finally{
-    // close resources
-}
-Java 7 implementation:
-try(// open resources here){
-    // use resources
-} catch (FileNotFoundException e) {
-    // exception handling
-}
-// resources are closed as soon as try-catch block is executed.
-
-Let’s write a simple program to read a file and print the first line using Java 7 try-with resources implementation.
-Java 7 Try With Resource Automatic Resource Management
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
- 
-public class Java7ResourceManagement
-{
-     public static void main(String[] args) {
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\journaldev.txt"))) {
-            System.out.println(br.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
-
-Benefits of using try with resources
-1.	More readable code and easy to write.
-2.	Automatic resource management.
-3.	Number of lines of code is reduced.
-4.	No need of finally block just to close the resources.
-5.	We can open multiple resources in try-with-resources statement separated by a semicolon. For example, we can write following code:
-try (BufferedReader br = new BufferedReader(new FileReader("C:\\journaldev.txt"));
-java.io.BufferedWriter writer = java.nio.file.Files.newBufferedWriter( FileSystems.getDefault().getPath("C:\\journaldev.txt"), Charset.defaultCharset())) {
-            System.out.println(br.readLine());
-}
-catch (IOException e) {
-e.printStackTrace();
-}
-6.	When multiple resources are opened in try-with-resources, it closes them in the reverse order to avoid any dependency issue. You can extend my resource program to prove that.
-
-Q.    Can static block throw exception?
-Ans. Yes, static block can throw only Runtime exception or can use a try-catch block to catch checked exception.
-Typically scenario will be if JDBC connection is created in static block and it fails then exception can be caught, logged and application can exit. If System.exit() is not done, then application may continue and next time if the class is referred JVM will throw NoClassDefFounderror since the class was not loaded by the Classloader.
-
-Q.  What is difference between ClassNotFoundException and NoClassDefFoundError?
-Ans. A ClassNotFoundException is thrown when the reported class is not found by the ClassLoader in the CLASSPATH. It could also mean that the class in question is trying to be loaded from another class which was loaded in a parent classloader and hence the class from the child classloader is not visible.
-Consider if NoClassDefFoundError occurs which is something like
-java.lang.NoClassDefFoundError
-src/com/TestClass
-does not mean that the TestClass class is not in the CLASSPATH. It means that the class TestClass was found by the ClassLoader however when trying to load the class, it ran into an error reading the class definition. This typically happens when the class in question has static blocks or members which use a Class that's not found by the ClassLoader. So to find the culprit, view the source of the class in question (TestClass in this case) and look for code using static blocks or static members.
-
-Q.  What happens if the exception is never caught and throws down the method stack?
-Ans. If the exception is not caught by any of the method in the method’s stack till you get to the main() method, the main method throws that exception and the JVM halts its execution.
-
-Q.  How do you get the descriptive information about the Exception occurred during the program execution?
-Ans. All the exceptions inherit a method printStackTrace() from the Throwable class. This method prints the stack trace from where the exception occurred. It prints the most recently entered method first and continues down, printing the name of each method as it works its way down the call stack from the top.
-
-Q.  What is UnsupportedOperationException?
-Ans. UnsupportedOperationException is the exception used to indicate that the operation is not supported. It’s used extensively in JDK classes, in collections framework java.util.Collections.UnmodifiableCollection throws this exception for all add and remove operations.
-
-Difference between final, finally and finalize
-There are many differences between final, finally and finalize. A list of differences between final, finally and finalize are given below:
-
-No.	Final	finally	finalize
-1)	Final is used to apply restrictions on class, method and variable. Final class can't be inherited, final method can't be overridden and final variable value can't be changed.	Finally is used to place important code, it will be executed whether exception is handled or not.	Finalize is used to perform clean up processing just before object is garbage collected.
-2)	Final is a keyword.	Finally is a block.	Finalize is a method.
-Exception Handling Best Practices
-•	Use Specific Exceptions – Base classes of Exception hierarchy doesn’t provide any useful information, thats why Java has so many exception classes, such as IOException with further sub-classes as FileNotFoundException, EOFException etc. We should always throw and catch specific exception classes so that caller will know the root cause of exception easily and process them. This makes debugging easy and helps client application to handle exceptions appropriately.
-
-•	Throw Early or Fail-Fast – We should try to throw exceptions as early as possible. Consider above processFile() method, if we pass null argument to this method we will get following exception.
-Exception in thread "main" java.lang.NullPointerException
-at java.io.FileInputStream.<init>(FileInputStream.java:134)
-at java.io.FileInputStream.<init>(FileInputStream.java:97)
-at com.journaldev.exceptions.CustomExceptionExample.processFile(CustomExceptionExample.java:42)
-at com.journaldev.exceptions.CustomExceptionExample.main(CustomExceptionExample.java:12)
-While debugging we will have to look out at the stack trace carefully to identify the actual location of exception. If we change our implementation logic to check for these exceptions early as below;
-private static void processFile(String file) throws MyException {
-if(file == null) throw new MyException("File name can't be null", "NULL_FILE_NAME");
-//further processing
-}
-Then the exception stack trace will be like below that clearly shows where the exception has occurred with clear message.
-com.sandeep.exceptions.MyException: File name can't be null
-at com.sandeep.exceptions.CustomExceptionExample.processFile(CustomExceptionExample.java:37)
-at com.sandeep.exceptions.CustomExceptionExample.main(CustomExceptionExample.java:12)
-
-•	Catch Late – Since java enforces to either handle the checked exception or to declare it in method signature, sometimes developers tend to catch the exception and log the error. But this practice is harmful because the caller program doesn’t get any notification for the exception. We should catch exception only when we can handle it appropriately. For example, in above method I am throwing exception back to the caller method to handle it. The same method could be used by other applications that might want to process exception in a different manner. While implementing any feature, we should always throw exceptions back to the caller and let them decide how to handle it.
-•	Closing Resources – Since exceptions halt the processing of program, we should close all the resources in finally block or use Java 7 try-with-resources enhancement to let java runtime close it for you.
-•	Logging Exceptions – We should always log exception messages and while throwing exception provide clear message so that caller will know easily why the exception occurred. We should always avoid empty catch block that just consumes the exception and doesn’t provide any meaningful details of exception for debugging.
-•	Single catch block for multiple exceptions – Most of the times we log exception details and provide message to the user, in this case we should use java 7 feature for handling multiple exceptions in a single catch block. This approach will reduce our code size and it will look cleaner too.
-•	Using Custom Exceptions – It’s always better to define exception handling strategy at the design time and rather than throwing and catching multiple exceptions, we can create a custom exception with error code and caller program can handle these error codes. Its also a good idea to create a utility method to process different error codes and use it.
-•	Naming Conventions and Packaging – When you create your custom exception, make sure it ends with Exception so that it will be clear from name itself that it’s an exception. Also make sure to package them like it’s done in JDK, for example IOException is the base exception for all IO operations.
-•	Use Exceptions Judiciously – Exceptions are costly and sometimes it’s not required to throw exception at all and we can return a boolean variable to the caller program to indicate whether an operation was successful or not. This is helpful where the operation is optional and you don’t want your program to get stuck because it fails. For example, while updating the stock quotes in database from a third party webservice, we may want to avoid throwing exception if the connection fails.
-•	Document the Exceptions Thrown – Use javadoc @throws to clearly specify the exceptions thrown by the method, it’s very helpful when you are providing an interface to other applications to use.
-
+<br />
 				</td>
-				<td></td>
+				<td width="7%"></td>
+			</tr>
+		</table>
+					
+				<table id="pageFooterTable" width="100%">	
+			<tr>
+				<td>
+					<center><hr width="100%"/><label class="footer_copyright"> All right reserved @Siyanshi Softwares, Bangalore <br /><br /><br /></label></center>
+				</td>
 			</tr>
 		</table>
 	</body>

@@ -1,0 +1,199 @@
+<html>
+	<head>
+		<title>Home Page</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+		<link rel="stylesheet" href="mycss.css"></link>
+	</head>
+	<body>
+		<table id="pageHeaderTable" border="0" width="100%">
+			<tr>
+				<td><img src="logo.png" height="90px" width="150px"/></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div class="topnav" id="myTopnav">
+						<a href="index.html" class="active">Home</a>
+						<div class="dropdown">
+							<button class="dropbtn">CORE Java 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="ExceptionHandling.html">Introduction</a>
+							  <a href="ExceptionHandling.html">Object Oriented Programming</a>
+							  <a href="ExceptionHandling.html">Polymorphism</a>
+							  <a href="ExceptionHandling.html">Interface & Abstract Class</a>
+							  <a href="ExceptionHandling.html">I/O Streams, Serialization</a>
+							  <a href="ExceptionHandling.html">Exception Handling</a>
+							  <a href="ExceptionHandling.html">Inheritence</a>
+							  <a href="ExceptionHandling.html">String</a>
+							  <a href="ExceptionHandling.html">Reflection</a>
+							  <a href="#">Multithreading</a>
+							  <a href="#">Collection Framework</a>
+							  <a href="#">Java 8</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<a href="#contact">JDBC</a>
+						<div class="dropdown">
+							<button class="dropbtn">Servlet 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="#">Introduction</a>
+							  <a href="#">Servlet Life Cycle</a>
+							  <a href="#">Request Dispatcher</a>
+							  <a href="#">Session Management</a>
+							  <a href="#">Cookies</a>
+							  <a href="#">URL Rewritting</a>
+							  <a href="#">Hidden Fields</a>
+							  <a href="#">Filter</a>
+							  <a href="#">Event and Listener</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="dropbtn">JSP 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="#">Introduction</a>
+							  <a href="#">Implicit Objects</a>
+							  <a href="#">Scripting Elements</a>
+							  <a href="#">Directives</a>
+							  <a href="#">EL Expressions</a>
+							  <a href="#">Scope</a>
+							  <a href="#">JSTL</a>
+							  <a href="#">Custom Tags</a>
+							  <a href="#">Interview Question-Answer</a>
+							</div>
+						</div>
+						<a href="#contact">JSF</a>
+						<a href="#contact">Hibernate</a>
+						<div class="dropdown">
+							<button class="dropbtn">Spring 
+							  <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+							  <a href="addEmployee.html">IOC</a>
+							  <a href="#">MVC</a>
+							  <a href="#">Transaction</a>
+							  <a href="#">Security</a>
+							</div>
+						</div> 
+						<a href="#about">SQL</a>
+						<a href="#about">JUnit</a>
+						<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		<table height="70%" width="100%">
+			<tr>
+				<td width="7%"></td>
+				<td>
+					<center>Polymorphism</center>
+					<br /></br />
+					Polymorphism is a process of one form behaving differently in different class.
+There are two types of Polymorphism :-
+
+Compile-time/Static Polymorphism:  We can achieve Compile-time Polymorphism using Method Overloading because in the case of Method Overloading method invocation will be decided based on parameters of the method. This check will be done by compiler at the compile time only.
+
+Run-time/Dynamic Polymorphism: We can achieve Run-time Polymorphism using Method Overriding and Dynamic Dispatch.
+
+Method Overloading:  Writing multiple methods inside the class with same name is called as Method Overloading. When we are overloading the methods we need to remember the following rules :
+1.	Method name must be same.
+2.	Return type can be anything.
+3.	Parameter must be changed in any one of the following three ways:
+	Interms of types of Parameter.
+	Interms of nos. of Parameter.
+	Interms of order of Parameter.
+
+Method Overriding:  Implementing Super class method in the sub class with same method signature is called as method overriding. When we are overriding Super class method in the Sub class we have to check the following:
+	Sub class method name must be same as Super class method name.
+	Sub class method parameter must be same as Super class method parameters.
+	Sub class method return type must be same as Super class method return type.
+	Sub class method access modifier must be same or higher than Super class access modifier. 
+
+Dynamic Dispatch:  The process of assigning Sub class object to Super class reference variable is called as Dynamic Dispatch.
+class A{ } 
+class B extends A{}
+
+A obj1=new A();	- True
+B obj2=new B();	- True
+A obj1=new B();	- True (Dynamic Dispatch)	
+B obj1=new A();	- False
+
+Q.  What is method signature?
+Ans.: Method signature represents the method name along with method parameters.
+
+Difference between Method Overloading and Method Overriding:
+Method Overloading	Method Overriding
+Writing two or more methods with the same name but with different signatures is called Method Overloading. 	Writing two or more methods with the same name  and same signature is called Method Overriding.
+Method Overloading a done in the same class.	Method Overriding is done in Super and Sub classes.
+In method overloading, method return type can be same or different.	In method overriding, method return type should also be same.
+JVM decides which method is called depending on the different in the method signature.	JVM decides which method is called depending on the data type (class) of the object used to call the method.
+Method Overloading is done when the programmer wants to extend the already available feature.	Method Overriding is done when the Programmer wants to provide a different implementation (body) for the same feature.
+Method Overloading is code refinement. Same method is refined to perform a different task.	Method Overriding is code replacement. The sub class method overrides (replace) the super class method.
+
+Polymorphism with Static Methods:
+A Static method is a method whose single copy in memory is shared by all the objects of the class. Static method belongs to the class rather than to the objects. So they are also called class methods. When static methods are overloaded or overridden, since they do not depend on the objects, the Java compiler need not wait till the objects are created to understand which method is called.
+
+Example:
+class A{
+	static void show(){
+		System.out.println("A- show() method");
+	}
+}
+class B extends A{
+	static void show(){
+		System.out.println("B- show() method");
+	}
+}
+public class StaticMethodPoly {
+	public static void main(String[] args) {
+		// Super class reference refers to sub class object
+		A a=new B();
+		// call show() method using super class reference
+		a.show();
+	}
+}
+
+Polymorphism with Private Methods.   (Overriding – No,    Overloading – Yes)
+*  Method overriding is not possible in case of Private Methods. (Private Methods are not available in 
+    the sub classes, this means, there is no possibility to override the private methods of the super class 
+    in its sub classes.) 
+*  Method overloading is possible in case of private methods.
+
+Polymorphism with Final Methods.    (Overriding – No,    Overloading – Yes)
+Final Methods can not be overridden, because they are not available to the sub classes. Therefore, only method overloading is possible with final methods.
+
+Q.  What happens if a method is written in the sub class with the same name as that of the private method of the super class ?
+Ans. :   It is possible to do so. But in this case, the method in the super class and the method in the sub class act as different methods. The super class will get its own copy and the sub class will have its own copy. It does not come under method overriding. The only way to call the private method of a class is by calling them within the class. For this purpose, we should create a public method and call the private method from within it. When this public method is called, it calls the private method.
+
+Q.  Can we take private methods and final methods as same?
+Ans :  Yes.
+Method Modifier 	Overloading	Overriding
+Static method	Yes	No
+Final method	Yes	No
+Private method	Yes	No
+
+
+
+<br />
+				</td>
+				<td width="7%"></td>
+			</tr>
+		</table>
+					
+				<table id="pageFooterTable" width="100%">	
+			<tr>
+				<td>
+					<center><hr width="100%"/><label class="footer_copyright"> All right reserved @Siyanshi Softwares, Bangalore <br /><br /><br /></label></center>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
